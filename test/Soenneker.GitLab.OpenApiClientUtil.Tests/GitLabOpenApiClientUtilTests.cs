@@ -1,20 +1,19 @@
 using Soenneker.GitLab.OpenApiClientUtil.Abstract;
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.GitLab.OpenApiClientUtil.Tests;
 
-[Collection("Collection")]
-public sealed class GitLabOpenApiClientUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class GitLabOpenApiClientUtilTests : HostedUnitTest
 {
     private readonly IGitLabOpenApiClientUtil _openapiclientutil;
 
-    public GitLabOpenApiClientUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public GitLabOpenApiClientUtilTests(Host host) : base(host)
     {
         _openapiclientutil = Resolve<IGitLabOpenApiClientUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
