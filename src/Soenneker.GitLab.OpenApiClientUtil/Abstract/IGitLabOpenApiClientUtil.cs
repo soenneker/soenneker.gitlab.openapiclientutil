@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Soenneker.GitLab.OpenApiClientUtil.Abstract;
 
 /// <summary>
-/// Exposes a cached OpenAPI client instance.
+/// Provides a cached GitLab OpenAPI client backed by the shared authenticated HTTP provider.
 /// </summary>
 public interface IGitLabOpenApiClientUtil: IDisposable, IAsyncDisposable
 {
