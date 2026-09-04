@@ -11,6 +11,7 @@ using Soenneker.Utils.AsyncSingleton;
 
 namespace Soenneker.GitLab.OpenApiClientUtil;
 
+/// <inheritdoc cref="IGitLabOpenApiClientUtil" />
 public sealed class GitLabOpenApiClientUtil : IGitLabOpenApiClientUtil
 {
     private readonly AsyncSingleton<GitLabOpenApiClient> _client;
