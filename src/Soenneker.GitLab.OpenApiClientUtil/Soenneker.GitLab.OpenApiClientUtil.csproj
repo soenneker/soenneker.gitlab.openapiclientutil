@@ -45,6 +45,6 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.GitLab.HttpClients" Version="11.0.171" />
-        <PackageReference Include="Soenneker.GitLab.OpenApiClient" Version="11.0.201" />
+        <PackageReference Include="Soenneker.GitLab.OpenApiClient" Version="11.0.202" />
     </ItemGroup>
 </Project>
